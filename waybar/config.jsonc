@@ -26,8 +26,25 @@
         "orientation": "inherit",
         "modules": [
             "idle_inhibitor",
-            "clock"
+            "clock#artemis"
         ]
+    },
+    "clock#artemis": {
+        "format": "{:%R  󰃭  %d·%m·%y}",
+        "rotate": 0,
+        "format-alt": "{:%A, %B %d, %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        }
     },
     "modules-center": [
         "group/pill#center"
@@ -40,17 +57,10 @@
         "orientation": "inherit"
     },
     "modules-right": [
-        "hyprland/language",
         "group/pill#right1",
         "group/pill#right2",
         "group/pill#right3"
     ],
-    "hyprland/language": {
-        "format": "󰌌 {}",
-        "format-se": "SE",
-        "format-swerty": "SW",
-        "on-click": "hyprctl switchxkblayout current next"
-    },
     "group/pill#right1": {
         "modules": [
             "backlight",
