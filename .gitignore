@@ -1,0 +1,7 @@
+# Ignore all wallpapers in any theme directory
+**/wallpapers/
+**/wall.awww.png
+**/wall.hyprlock.png
+**/wall.set
+**/logo/*.png
+**/logo/*.jpg

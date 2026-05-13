@@ -1,0 +1,26 @@
+/* User custom styles */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+/* Focused workspace on the current monitor */
+#workspaces button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+    border-bottom: 3px solid white; /* Extra indication for focus */
+}
+
+/* Focused workspace on THE OTHER monitor */
+#workspaces button.visible {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Workspace that has programs but is not focused */
+#workspaces button.occupied {
+    color: @main-fg;
+    font-weight: bold;
+    text-decoration: underline; /* Indication that it's "in use" */
+}
