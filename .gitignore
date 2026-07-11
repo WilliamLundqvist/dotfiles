@@ -20,5 +20,6 @@ hypr/shaders/.compiled.cache.glsl
 hypr/hyprland.conf.old-pre-hyde
 hypr/hyprland.conf.save
 
-# Machine-specific (customize locally, do not commit)
+# Monitor layout scripts (tracked)
+# monitors.conf itself is gitignored (machine-specific)
 hypr/monitors.conf

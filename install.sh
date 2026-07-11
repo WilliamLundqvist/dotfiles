@@ -49,6 +49,7 @@ DEPENDENCIES=(
     qt5-wayland
     qt6-wayland
     nwg-look
+    socat
 )
 
 # Optional: Add HyDE specific tools if they are in repos or AUR
@@ -79,6 +80,11 @@ safe_link "$CONFIG_DIR/hypr" "$DOTFILES_DIR/hypr"
 safe_link "$CONFIG_DIR/waybar" "$DOTFILES_DIR/waybar"
 safe_link "$CONFIG_DIR/kitty" "$DOTFILES_DIR/kitty"
 safe_link "$CONFIG_DIR/hyde" "$DOTFILES_DIR/hyde"
+
+mkdir -p "$CONFIG_DIR/swaync"
+safe_link "$CONFIG_DIR/swaync/style.css" "$DOTFILES_DIR/swaync/style.css"
+safe_link "$CONFIG_DIR/swaync/user-style.css" "$DOTFILES_DIR/swaync/user-style.css"
+safe_link "$CONFIG_DIR/swaync/config.json" "$DOTFILES_DIR/swaync/config.json"
 
 # 5. Initialize HyDE
 if command -v hyde-shell &> /dev/null; then

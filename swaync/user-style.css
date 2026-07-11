@@ -1,0 +1,134 @@
+/* Artemis notification polish — safe to edit; survives wallbash regen */
+
+@define-color artemis-accent-start #00ff99;
+@define-color artemis-accent-end #00ccff;
+@define-color artemis-surface #020203;
+@define-color artemis-surface-hover #1a1a1a;
+@define-color artemis-border #d7dbe3;
+@define-color artemis-muted #8f9fb4;
+@define-color artemis-body #b8b8b8;
+
+/* Fix wallbash template leaving this undefined */
+@define-color noti-bg-opaque @sw-noti-window-bg;
+@define-color noti-bg-hover-opaque @sw-noti-bg-hover;
+
+:root {
+  --cc-bg: rgba(2, 2, 3, 0.92);
+  --noti-border-color: rgba(215, 219, 227, 0.35);
+  --noti-bg: 2, 2, 3;
+  --noti-bg-alpha: 0.94;
+  --noti-bg-darker: rgb(10, 10, 12);
+  --noti-bg-hover: rgb(26, 26, 26);
+  --noti-bg-focus: rgba(68, 86, 107, 0.45);
+  --noti-close-bg: rgba(215, 219, 227, 0.08);
+  --noti-close-bg-hover: rgba(0, 255, 153, 0.18);
+  --text-color: rgb(252, 252, 252);
+  --text-color-disabled: rgb(143, 159, 180);
+  --bg-selected: rgb(0, 255, 153);
+  --border-radius: 10px;
+  --font-size-body: 13px;
+  --font-size-summary: 14px;
+  --notification-shadow: 0 0 0 1px rgba(0, 255, 153, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", sans-serif;
+}
+
+.control-center {
+  background: rgba(2, 2, 3, 0.94);
+  border: 2px solid rgba(215, 219, 227, 0.45);
+  box-shadow: var(--notification-shadow);
+}
+
+.widget-title > label,
+.widget-dnd > label {
+  color: @artemis-muted;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.notification-row .notification-background {
+  padding: 8px 14px;
+}
+
+.notification-row .notification-background .notification {
+  background: rgba(2, 2, 3, 0.94);
+  border: 1px solid rgba(215, 219, 227, 0.28);
+  border-left: 3px solid @artemis-accent-start;
+  box-shadow: var(--notification-shadow);
+  opacity: 1;
+}
+
+.notification-row .notification-background .notification:hover {
+  background: @artemis-surface-hover;
+  border-color: rgba(0, 255, 153, 0.35);
+}
+
+.notification-row .notification-background .notification.critical {
+  border-left-color: #ff6b8a;
+  box-shadow: 0 0 0 1px rgba(255, 107, 138, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
+  color: @artemis-border;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
+  color: @artemis-body;
+  line-height: 1.45;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
+  color: @artemis-muted;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.close-button {
+  background: rgba(215, 219, 227, 0.08);
+  border: 1px solid rgba(215, 219, 227, 0.12);
+}
+
+.close-button:hover {
+  background: rgba(0, 255, 153, 0.16);
+  border-color: rgba(0, 255, 153, 0.35);
+}
+
+.notification-row .notification-background .notification .notification-action > button,
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
+  background: rgba(68, 86, 107, 0.35);
+  border: 1px solid rgba(215, 219, 227, 0.2);
+  border-radius: 8px;
+  color: @artemis-border;
+  font-weight: 600;
+  padding: 6px 12px;
+}
+
+.notification-row .notification-background .notification .notification-action > button:hover,
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
+  background: rgba(0, 255, 153, 0.18);
+  border-color: rgba(0, 255, 153, 0.45);
+  color: #ffffff;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-entry {
+  background: rgba(10, 10, 12, 0.95);
+  border: 1px solid rgba(215, 219, 227, 0.2);
+  border-radius: 8px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: rgba(68, 86, 107, 0.3);
+  border: 1px solid rgba(215, 219, 227, 0.18);
+  border-radius: 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: rgba(0, 204, 255, 0.14);
+  border-color: rgba(0, 204, 255, 0.35);
+}

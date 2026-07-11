@@ -1,0 +1,17 @@
+
+# Copy to monitors.conf (gitignored, machine-specific).
+# cp monitors.conf.example monitors.conf
+
+$monitors = $HOME/Projekt/dotfiles/hypr/scripts
+
+exec-once = sleep 0.5 && $monitors/apply-monitors.sh
+exec-once = $monitors/monitor-listener.sh
+
+bindl = , switch:on:Lid Switch, exec, $monitors/apply-monitors.sh --lid-closed
+bindl = , switch:off:Lid Switch, exec, sleep 0.3 && $monitors/apply-monitors.sh
+bindd = $mainMod Alt Shift, M, [Monitors] re-apply monitor layout, exec, $monitors/apply-monitors.sh
+bindd = $mainMod Alt Shift, R, [Monitors] reload config and monitors, exec, $monitors/reload-hypr.sh
+
+monitor = desc:Samsung Electric Company LC27G7xT HNBW800080, 2560x1440@144, 0x0, 1.25
+monitor = desc:Microstep Optix G24C 0x00000001, 1920x1080@120, 2048x0, 1
+monitor = desc:Samsung Display Corp. 0x4178, disable

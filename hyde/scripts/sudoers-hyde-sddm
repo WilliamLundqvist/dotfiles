@@ -1,0 +1,3 @@
+# Allow syncing Artemis wallpapers to SDDM login without a password prompt.
+# Install once: sudo cp hyde/scripts/sudoers-hyde-sddm /etc/sudoers.d/hyde-sddm && sudo chmod 440 /etc/sudoers.d/hyde-sddm
+williaml ALL=(ALL) NOPASSWD: /usr/bin/cp -f /var/tmp/hyde-sddm-wall.png /usr/share/sddm/themes/Corners/backgrounds/bg.png

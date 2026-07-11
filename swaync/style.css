@@ -1,0 +1,4 @@
+/* HyDE + Artemis: base structure, wallbash colors, personal overrides */
+@import "/etc/xdg/swaync/style.css";
+@import "theme.css";
+@import "user-style.css";
